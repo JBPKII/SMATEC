@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SMATEC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SMATEC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Periodicidad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mensual" />
+      <xs:enumeration value="Diario" />
+      <xs:enumeration value="TiempoReal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Periodicidad" nillable="true" type="tns:Periodicidad" />
+  <xs:complexType name="ArrayOfDescripcionEquipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DescripcionEquipo" nillable="true" type="tns:DescripcionEquipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDescripcionEquipo" nillable="true" type="tns:ArrayOfDescripcionEquipo" />
+  <xs:complexType name="DescripcionEquipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescripcionEquipo" nillable="true" type="tns:DescripcionEquipo" />
+</xs:schema>

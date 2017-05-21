@@ -1,0 +1,170 @@
+﻿
+
+@{
+    ViewBag.Title = "Actual";
+}
+<div class="container">
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <meta http-equiv="refresh" content="30" />
+    <div class="row">
+        <div class="col-sm-4">
+            <label for="myChartTempHum">
+                Temperatura (ºC) y Humedad (%)<br />
+                <canvas id="myChartTempHum" width="300" height="300"></canvas>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label for="myChartTempHum">
+                Óxido de Carbono (ppm)<br />
+                <canvas id="myChartCO" width="300" height="300"></canvas>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label for="myChartTempHum">
+                Consumo (w)<br />
+                <canvas id="myChartConsumo" width="300" height="300"></canvas>
+            </label>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Views/ChartJs")
+
+<script>
+    var labelsArray = "@ViewBag.ColumnName".split('|');
+    var dataTempHum =
+        {
+            labels: labelsArray,
+            datasets:
+                [{
+                    label: "Temp. (ºC)",
+                    fillColor: "rgba(255,200,200,0.25)",
+                    strokeColor: "rgba(255,150,150,1)",
+                    pointColor: "rgba(255,50,50,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(255,0,0,1)",
+                    data: "@ViewBag.ValuesTemperatura".split('|')
+                }
+                    ,
+                {
+                    label: "Hum. (%)",
+                    fillColor: "rgba(200,200,255,0.25)",
+                    strokeColor: "rgba(150,150,255,1)",
+                    pointColor: "rgba(50,50,255,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(0,0,255,1)",
+                    data: "@ViewBag.ValuesHumedad".split('|')
+                }]
+        }
+
+    var dataCO =
+        {
+            labels: labelsArray,
+            datasets:
+                [{
+                    label: "Óxido de Carbono (CO)",
+                    fillColor: "rgba(200,200,200,0.5)",
+                    strokeColor: "rgba(180,180,180,1)",
+                    pointColor: "rgba(150,150,150,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(0,0,0,1)",
+                    data: "@ViewBag.ValuesCO".split('|')
+                }]
+        }
+
+    var dataConsumo =
+        {
+            labels: labelsArray,
+            datasets:
+                [{
+                    label: "Consumo (w)",
+                    fillColor: "rgba(255,127,0,0.5)",
+                    strokeColor: "rgba(255,150,40,1)",
+                    pointColor: "rgba(255,127,0,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(255,127,0,1)",
+                    data: "@ViewBag.ValuesConsumo".split('|')
+                }]
+        }
+    var options = {
+        //Boolean - Whether to show lines for each scale point
+        scaleShowLine: true,
+        //Boolean - Whether we show the angle lines out of the radar
+        angleShowLineOut: true,
+        //Boolean - Whether to show labels on the scale
+        scaleShowLabels: false,
+        // Boolean - Whether the scale should begin at zero
+        scaleBeginAtZero: true,
+        //String - Colour of the angle line
+        angleLineColor: "rgba(0,0,0,.1)",
+        //Number - Pixel width of the angle line
+        angleLineWidth: 1,
+        //String - Point label font declaration
+        pointLabelFontFamily: "'Arial'",
+        //String - Point label font weight
+        pointLabelFontStyle: "normal",
+        //Number - Point label font size in pixels
+        pointLabelFontSize: 10,
+        //String - Point label font colour
+        pointLabelFontColor: "#666",
+        //Boolean - Whether to show a dot for each point
+        pointDot: true,
+        //Number - Radius of each point dot in pixels
+        pointDotRadius: 3,
+        //Number - Pixel width of point dot stroke
+        pointDotStrokeWidth: 1,
+        //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
+        pointHitDetectionRadius: 20,
+        //Boolean - Whether to show a stroke for datasets
+        datasetStroke: true,
+        //Number - Pixel width of dataset stroke
+        datasetStrokeWidth: 2,
+        //Boolean - Whether to fill the dataset with a colour
+        datasetFill: true,
+    }
+
+    //console.log(document.getElementById("myChart"));
+
+    //Temperatura y Humedad
+    //function drawTempHum() {
+        var ctx = document.getElementById("myChartTempHum").getContext("2d");
+        /*var chartTempHum = */new Chart(ctx).Radar(dataTempHum, options);
+        //chartTempHum.render();
+    //}
+    //CO
+    //function drawCO() {
+        var ctx = document.getElementById("myChartCO").getContext("2d");
+        var charCO = new Chart(ctx).Radar(dataCO, options);
+        //charCO.render();
+    //}
+    //Consumo
+    //function drawConsumo() {
+        var ctx = document.getElementById("myChartConsumo").getContext("2d");
+        var chartConsumo = new Chart(ctx).Radar(dataConsumo, options);
+        //chartConsumo.render();
+    //}
+
+    /*$('#bs-grafTempHum').on("shown.bs.tab", function () {
+        drawTempHum();
+        $('#bs-grafTempHum').off(); //to remove the binded event after initial rendering
+    });*/
+    /*$('#bs-grafCO').on("shown.bs.tab", function () {
+        drawCO();
+        $('#bs-grafCO').off(); //to remove the binded event after initial rendering
+    });
+    $('#bs-grafCons').on("shown.bs.tab", function () {
+        drawConsumo();
+        $('#bs-grafCons').off(); //to remove the binded event after initial rendering
+    });*/
+
+    $(document).ready(function () {
+
+
+    });
+</script>
+

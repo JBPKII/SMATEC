@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SMATEC.WSRecopiladorDatos.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BBDDServ" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.48.1.245</Value>
+    </Setting>
+    <Setting Name="LogSource" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WSRecopiladorDatos</Value>
+    </Setting>
+    <Setting Name="BBDDSchema" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smatec</Value>
+    </Setting>
+    <Setting Name="BBDDUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">usrsmatec</Value>
+    </Setting>
+    <Setting Name="BBDDPass" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5m@t3c2016</Value>
+    </Setting>
+    <Setting Name="BBDDFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Application</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

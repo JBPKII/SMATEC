@@ -1,0 +1,3 @@
+Limpieza de registros antiguos
+Mostrar un histórico con las alertas
+Mostrar en la página principal un cuadro con los días sin alertas y la alerta actual si incurriera

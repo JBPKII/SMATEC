@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Arduino</title>
+<style>
+.rotate {
+    display:inline-block;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);    
+}
+</style>
+<script type="text/javascript">
+function dibujar(){
+//grafica hum/tem
+var c = document.getElementById ('temHum');
+var ctx = c.getContext ('2d');
+ctx.beginPath();
+//dibujar margen
+ctx.moveTo(0,0);
+ctx.lineTo(630,0);
+ctx.lineTo(630,290);
+ctx.lineTo(0,290);
+ctx.lineTo(0,0);
+ctx.lineWidth="2";
+ctx.stroke();
+//dibujar lineas verticales
+ctx.beginPath();
+ctx.moveTo(26,0);
+ctx.lineTo(26,290);
+//+26,25
+ctx.moveTo(52,0);
+ctx.lineTo(52,290);
+ctx.moveTo(79,0);
+ctx.lineTo(79,290);
+ctx.moveTo(105,0);
+ctx.lineTo(105,290);
+ctx.moveTo(131,0);
+ctx.lineTo(131,290);
+ctx.moveTo(157,0);
+ctx.lineTo(157,290);
+ctx.moveTo(184,0);
+ctx.lineTo(184,290);
+ctx.moveTo(210,0);
+ctx.lineTo(210,290);
+ctx.moveTo(236,0);
+ctx.lineTo(236,290);
+ctx.moveTo(262,0);
+ctx.lineTo(262,290);
+ctx.moveTo(289,0);
+ctx.lineTo(289,290);
+
+ctx.moveTo(315,0);
+ctx.lineTo(315,290);
+
+ctx.moveTo(341,0);
+ctx.lineTo(341,290);
+ctx.moveTo(367,0);
+ctx.lineTo(367,290);
+ctx.moveTo(394,0);
+ctx.lineTo(394,290);
+ctx.moveTo(420,0);
+ctx.lineTo(420,290);
+ctx.moveTo(446,0);
+ctx.lineTo(446,290);
+ctx.moveTo(473,0);
+ctx.lineTo(473,290);
+ctx.moveTo(499,0);
+ctx.lineTo(499,290);
+ctx.moveTo(525,0);
+ctx.lineTo(525,290);
+ctx.moveTo(551,0);
+ctx.lineTo(551,290);
+ctx.moveTo(578,0);
+ctx.lineTo(578,290);
+ctx.moveTo(604,0);
+ctx.lineTo(604,290);
+
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//linea tiempo actual prueba
+ctx.beginPath();
+ctx.moveTo(|,0);
+ctx.lineTo(|,290);
+ctx.lineWidth="1";
+ctx.strokeStyle="#22FF22";
+ctx.stroke();
+//linea tiempo actual fin de prueba
+//ctx.moveTo(315,0);
+//ctx.lineTo(315,290);
+ctx.beginPath();
+
+//dibujar lineas horizontales
+ctx.moveTo(0,35);
+ctx.lineTo(630,35);
+ctx.moveTo(0,110);
+ctx.lineTo(630,110);
+ctx.moveTo(0,185);
+ctx.lineTo(630,185);
+ctx.moveTo(0,260);
+ctx.lineTo(630,260);
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//dibujar linea de prueba Temperatura
+ctx.beginPath();
+ctx.moveTo(0,·);
+ctx.lineTo(26,·);
+ctx.lineTo(52,·);
+ctx.lineTo(79,·);
+ctx.lineTo(105,·);
+ctx.lineTo(131,·);
+ctx.lineTo(157,·);
+ctx.lineTo(184,·);
+ctx.lineTo(210,·);
+ctx.lineTo(236,·);
+ctx.lineTo(262,·);
+ctx.lineTo(289,·);
+ctx.lineTo(315,·);
+ctx.lineTo(341,·);
+ctx.lineTo(367,·);
+ctx.lineTo(394,·);
+ctx.lineTo(420,·);
+ctx.lineTo(446,·);
+ctx.lineTo(473,·);
+ctx.lineTo(499,·);
+ctx.lineTo(525,·);
+ctx.lineTo(551,·);
+ctx.lineTo(578,·);
+ctx.lineTo(604,·);
+ctx.lineTo(630,·);
+ctx.lineWidth="2";
+ctx.strokeStyle="red";
+ctx.stroke();
+//dibujar linea de prueba Humedad
+ctx.beginPath();
+ctx.moveTo(0,·);
+ctx.lineTo(26,·);
+ctx.lineTo(52,·);
+ctx.lineTo(79,·);
+ctx.lineTo(105,·);
+ctx.lineTo(131,·);
+ctx.lineTo(157,·);
+ctx.lineTo(184,·);
+ctx.lineTo(210,·);
+ctx.lineTo(236,·);
+ctx.lineTo(262,·);
+ctx.lineTo(289,·);
+ctx.lineTo(315,·);
+ctx.lineTo(341,·);
+ctx.lineTo(367,·);
+ctx.lineTo(394,·);
+ctx.lineTo(420,·);
+ctx.lineTo(446,·);
+ctx.lineTo(473,·);
+ctx.lineTo(499,·);
+ctx.lineTo(525,·);
+ctx.lineTo(551,·);
+ctx.lineTo(578,·);
+ctx.lineTo(604,·);
+ctx.lineTo(630,·);
+ctx.lineWidth="2";
+ctx.strokeStyle="rgb(0, 0, 153)";
+ctx.stroke();
+
+//grafica consumo
+c = document.getElementById ('consumo');
+ctx = c.getContext ('2d');
+ctx.beginPath();
+//dibujar margen
+ctx.moveTo(0,0);
+ctx.lineTo(630,0);
+ctx.lineTo(630,290);
+ctx.lineTo(0,290);
+ctx.lineTo(0,0);
+ctx.lineWidth="2";
+ctx.stroke();
+//dibujar lineas verticales
+ctx.beginPath();
+ctx.moveTo(26,0);
+ctx.lineTo(26,290);
+//+26,25
+ctx.moveTo(52,0);
+ctx.lineTo(52,290);
+ctx.moveTo(79,0);
+ctx.lineTo(79,290);
+ctx.moveTo(105,0);
+ctx.lineTo(105,290);
+ctx.moveTo(131,0);
+ctx.lineTo(131,290);
+ctx.moveTo(157,0);
+ctx.lineTo(157,290);
+ctx.moveTo(184,0);
+ctx.lineTo(184,290);
+ctx.moveTo(210,0);
+ctx.lineTo(210,290);
+ctx.moveTo(236,0);
+ctx.lineTo(236,290);
+ctx.moveTo(262,0);
+ctx.lineTo(262,290);
+ctx.moveTo(289,0);
+ctx.lineTo(289,290);
+
+ctx.moveTo(315,0);
+ctx.lineTo(315,290);
+
+ctx.moveTo(341,0);
+ctx.lineTo(341,290);
+ctx.moveTo(367,0);
+ctx.lineTo(367,290);
+ctx.moveTo(394,0);
+ctx.lineTo(394,290);
+ctx.moveTo(420,0);
+ctx.lineTo(420,290);
+ctx.moveTo(446,0);
+ctx.lineTo(446,290);
+ctx.moveTo(473,0);
+ctx.lineTo(473,290);
+ctx.moveTo(499,0);
+ctx.lineTo(499,290);
+ctx.moveTo(525,0);
+ctx.lineTo(525,290);
+ctx.moveTo(551,0);
+ctx.lineTo(551,290);
+ctx.moveTo(578,0);
+ctx.lineTo(578,290);
+ctx.moveTo(604,0);
+ctx.lineTo(604,290);
+
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//linea tiempo actual prueba
+ctx.beginPath();
+ctx.moveTo(|,0);
+ctx.lineTo(|,290);
+ctx.lineWidth="1";
+ctx.strokeStyle="#22FF22";
+ctx.stroke();
+//linea tiempo actual fin de prueba
+//ctx.moveTo(315,0);
+//ctx.lineTo(315,290);
+ctx.beginPath();
+
+//dibujar lineas horizontales
+ctx.moveTo(0,27);
+ctx.lineTo(630,27);
+ctx.moveTo(0,87);
+ctx.lineTo(630,87);
+ctx.moveTo(0,147);
+ctx.lineTo(630,147);
+ctx.moveTo(0,207);
+ctx.lineTo(630,207);
+ctx.moveTo(0,267);
+ctx.lineTo(630,267);
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//dibujar linea de prueba Consumo
+ctx.beginPath();
+ctx.moveTo(0,·);
+ctx.lineTo(26,·);
+ctx.lineTo(52,·);
+ctx.lineTo(79,·);
+ctx.lineTo(105,·);
+ctx.lineTo(131,·);
+ctx.lineTo(157,·);
+ctx.lineTo(184,·);
+ctx.lineTo(210,·);
+ctx.lineTo(236,·);
+ctx.lineTo(262,·);
+ctx.lineTo(289,·);
+ctx.lineTo(315,·);
+ctx.lineTo(341,·);
+ctx.lineTo(367,·);
+ctx.lineTo(394,·);
+ctx.lineTo(420,·);
+ctx.lineTo(446,·);
+ctx.lineTo(473,·);
+ctx.lineTo(499,·);
+ctx.lineTo(525,·);
+ctx.lineTo(551,·);
+ctx.lineTo(578,·);
+ctx.lineTo(604,·);
+ctx.lineTo(630,·);
+ctx.lineWidth="2";
+ctx.strokeStyle="rgb(204, 51, 204)";
+ctx.stroke();
+
+//grafica monoxido 
+c = document.getElementById ('monox');
+ctx = c.getContext ('2d');
+ctx.beginPath();
+//dibujar margen
+ctx.moveTo(0,0);
+ctx.lineTo(630,0);
+ctx.lineTo(630,290);
+ctx.lineTo(0,290);
+ctx.lineTo(0,0);
+ctx.lineWidth="2";
+ctx.stroke();
+//lineas verticales
+ctx.beginPath();
+ctx.moveTo(26,0);
+ctx.lineTo(26,290);
+//+26,25
+ctx.moveTo(52,0);
+ctx.lineTo(52,290);
+ctx.moveTo(79,0);
+ctx.lineTo(79,290);
+ctx.moveTo(105,0);
+ctx.lineTo(105,290);
+ctx.moveTo(131,0);
+ctx.lineTo(131,290);
+ctx.moveTo(157,0);
+ctx.lineTo(157,290);
+ctx.moveTo(184,0);
+ctx.lineTo(184,290);
+ctx.moveTo(210,0);
+ctx.lineTo(210,290);
+ctx.moveTo(236,0);
+ctx.lineTo(236,290);
+ctx.moveTo(262,0);
+ctx.lineTo(262,290);
+ctx.moveTo(289,0);
+ctx.lineTo(289,290);
+
+ctx.moveTo(315,0);
+ctx.lineTo(315,290);
+
+ctx.moveTo(341,0);
+ctx.lineTo(341,290);
+ctx.moveTo(367,0);
+ctx.lineTo(367,290);
+ctx.moveTo(394,0);
+ctx.lineTo(394,290);
+ctx.moveTo(420,0);
+ctx.lineTo(420,290);
+ctx.moveTo(446,0);
+ctx.lineTo(446,290);
+ctx.moveTo(473,0);
+ctx.lineTo(473,290);
+ctx.moveTo(499,0);
+ctx.lineTo(499,290);
+ctx.moveTo(525,0);
+ctx.lineTo(525,290);
+ctx.moveTo(551,0);
+ctx.lineTo(551,290);
+ctx.moveTo(578,0);
+ctx.lineTo(578,290);
+ctx.moveTo(604,0);
+ctx.lineTo(604,290);
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//linea tiempo actual prueba
+ctx.beginPath();
+ctx.moveTo(|,0);
+ctx.lineTo(|,290);
+ctx.lineWidth="1";
+ctx.strokeStyle="#22FF22";
+ctx.stroke();
+//linea tiempo actual fin de prueba
+//ctx.moveTo(315,0);
+//ctx.lineTo(315,290);
+ctx.beginPath();
+
+//lineas horizontales
+ctx.moveTo(0,20);
+ctx.lineTo(630,20);
+ctx.moveTo(0,71);
+ctx.lineTo(630,71);
+ctx.moveTo(0,122);
+ctx.lineTo(630,122);
+ctx.moveTo(0,173);
+ctx.lineTo(630,173);
+ctx.moveTo(0,224);
+ctx.lineTo(630,224);
+ctx.moveTo(0,275);
+ctx.lineTo(630,275);
+ctx.lineWidth="0.5";
+ctx.strokeStyle="#999999";
+ctx.stroke();
+//dibujar linea de prueba Monoxido
+ctx.beginPath();
+ctx.moveTo(0,·);
+ctx.lineTo(26,·);
+ctx.lineTo(52,·);
+ctx.lineTo(79,·);
+ctx.lineTo(105,·);
+ctx.lineTo(131,·);
+ctx.lineTo(157,·);
+ctx.lineTo(184,·);
+ctx.lineTo(210,·);
+ctx.lineTo(236,·);
+ctx.lineTo(262,·);
+ctx.lineTo(289,·);
+ctx.lineTo(315,·);
+ctx.lineTo(341,·);
+ctx.lineTo(367,·);
+ctx.lineTo(394,·);
+ctx.lineTo(420,·);
+ctx.lineTo(446,·);
+ctx.lineTo(473,·);
+ctx.lineTo(499,·);
+ctx.lineTo(525,·);
+ctx.lineTo(551,·);
+ctx.lineTo(578,·);
+ctx.lineTo(604,·);
+ctx.lineTo(630,·);
+ctx.lineWidth="2";
+ctx.strokeStyle="rgb(255, 153, 0)";
+ctx.stroke();
+}
+</script>
+</head>
+<body style="width: 1087px; color: rgb(0, 0, 0);" onload="dibujar()" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<table style="text-align: left; width: 834px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="color: black; width: 210px;"></td>
+<td style="text-align: center; background-color: rgb(153, 255, 255); width: 115px;"><span style="font-weight: bold; font-family: Consolas;">Actual</span></td>
+<td style="text-align: center; color: black; background-color: rgb(153, 255, 255); width: 115px;"><span style="font-weight: bold; font-family: Consolas;">Diario</span></td>
+<td style="text-align: center; color: black; background-color: rgb(153, 255, 255); width: 115px;"><span style="font-weight: bold; font-family: Consolas;">Semanal</span></td>
+<td style="text-align: center; color: black; background-color: rgb(153, 255, 255); width: 115px;"><span style="font-family: Consolas; font-weight: bold;">Mensual</span></td>
+<td style="text-align: center; color: black; background-color: rgb(153, 255, 255); width: 115px;"><span style="font-family: Consolas; font-weight: bold;">Anual</span></td>
+</tr>
+<tr>
+<td style="text-align: center; background-color: rgb(153, 255, 153); width: 210px; color: red;"><span style="font-family: Consolas; font-weight: bold;">Temperatura</span></td>
+<td style="width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+</tr>
+<tr>
+<td style="text-align: center; background-color: rgb(153, 255, 153); width: 210px; color: rgb(0, 0, 153);"><span style="font-weight: bold; font-family: Consolas;">Humedad</span></td>
+<td style="width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+</tr>
+<tr>
+<td style="text-align: center; background-color: rgb(153, 255, 153); width: 210px; color: rgb(204, 51, 204);"><span style="font-family: Consolas; font-weight: bold;">Consumo</span></td>
+<td style="width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+</tr>
+<tr>
+<td style="text-align: center; background-color: rgb(153, 255, 153); width: 210px; color: rgb(255, 153, 0);"><span style="font-family: Consolas; font-weight: bold;">Monóxido
+de Carbono</span></td>
+<td style="width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+<td style="color: black; width: 115px;">·</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<tr>
+<td>
+<!-- temperatura/humedad -->
+<table style="border: medium hidden ; border-collapse: collapse; width: 834px; height: 374px;" border="2" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; color: red; width: 122; height: 25px;">Temperatura</br>
+(ºC)</td>
+<td colspan="12" style="border: hidden; font-weight: bold; font-family: Consolas;"></td>
+<td style="border: hidden; font-weight: bold; font-family: Consolas; width: 96px; color: rgb(0, 0, 153);">Humedad</br>
+(%)</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 70px; color: red;">40</td>
+<!-- GRAFICA TEMPERATURA/HUMEDAD AQUI -->
+<td style="border: hidden;" colspan="12" rowspan="4" cellpadding="0"> <canvas id="temHum" width="630" height="290"></canvas> </td>
+<td style="border: hidden; font-weight: bold; font-family: Consolas; width: 96px; height: 70px; color: rgb(0, 0, 153);">80</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 70px; color: red;">30</td>
+<td style="border: hidden; font-weight: bold; font-family: Consolas; width: 96px; height: 70px; color: rgb(0, 0, 153);">60</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 70px; color: red;">20</td>
+<td style="border: hidden; font-weight: bold; font-family: Consolas; width: 96px; height: 70px; color: rgb(0, 0, 153);">40</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 70px; color: red;">10</td>
+<td style="border: hidden; font-weight: bold; font-family: Consolas; width: 96px; height: 70px; color: rgb(0, 0, 153);">20</td>
+</tr>
+</tr>
+<tr style="text-align: center; font-weight: bold; font-family: Consolas;">
+<td style="border-right: medium hidden; border-bottom: medium hidden; width: 150px; height: 50px;"></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">1:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">3:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">5:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">7:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">9:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">11:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">13:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">15:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">17:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">19:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">21:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">23:00</div></td>
+<td style="border: medium hidden ; font-family: Consolas; width: 96px; height: 50px;"></td>
+</tr>
+
+</td>
+</tr>
+
+<tr>
+<td style="border: hidden;">
+<!-- Consumo -->
+<br>
+</td>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; color: rgb(204,51,204); width: 122; height: 25px;">Consumo</br>
+(W)</td>
+<td colspan="12" style="border: hidden; font-weight: bold; font-family: Consolas;"></td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 56px; color: rgb(204,51,204);">4500</td>
+<!-- GRAFICA CONSUMO AQUI -->
+<td style="border: hidden;" colspan="12" rowspan="5" cellpadding="0"> <canvas id="consumo" width="630" height="290"></canvas> </td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 56px; color: rgb(204,51,204);">3500</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 56px; color: rgb(204,51,204);">2500</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 56px; color: rgb(204,51,204);">1500</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 56px; color: rgb(204,51,204);">500</td>
+</tr>
+</tr>
+<tr style="text-align: center; font-weight: bold; font-family: Consolas;">
+<td style="border-right: medium hidden; border-bottom: medium hidden; width: 150px; height: 50px;"></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">1:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">3:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">5:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">7:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">9:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">11:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">13:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">15:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">17:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">19:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">21:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">23:00</div></td>
+<td style="border: medium hidden ; font-family: Consolas; width: 96px; height: 50px;"></td>
+</tr>
+
+<tr>
+<td style="border: hidden;">
+<!-- monoxido -->
+<br>
+</td>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; color: rgb(255, 153, 0); width: 122; height: 25px;">CO</br>
+(ppm)</td>
+<td colspan="12" style="border: hidden; font-weight: bold; font-family: Consolas;"></td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">3000</td>
+<!-- GRAFICA monoxido AQUI -->
+<td style="border: hidden;" colspan="12" rowspan="6" cellpadding="0"> <canvas id="monox" width="630" height="290"></canvas> </td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">2500</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">2000</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">1500</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">1000</td>
+</tr>
+<tr>
+<td style="border: hidden; text-align: right; font-weight: bold; font-family: Consolas; height: 47px; color: rgb(255, 153, 0);">500</td>
+</tr>
+</tr>
+<tr style="text-align: center; font-weight: bold; font-family: Consolas;">
+<td style="border-right: medium hidden; border-bottom: medium hidden; width: 150px; height: 50px;"></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">1:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">3:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">5:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">7:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">9:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">11:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">13:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">15:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">17:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">19:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">21:00</div></td>
+<td style="border-right: 1px solid silver; border-bottom: medium hidden; width: 47px; height: 50px;"><div class="rotate">23:00</div></td>
+<td style="border: medium hidden ; font-family: Consolas; width: 96px; height: 50px;"></td>
+</tr>
+</tbody>
+</table>
+</body></html>
